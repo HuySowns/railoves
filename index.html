@@ -167,8 +167,8 @@
                     requestFrame.call(window, this.loop.bind(this));
                 },
                 adjustCanvas: function () {
-                    canvas.width = window.innerWidth - 100;
-                    canvas.height = window.innerHeight - 30;
+                    canvas.width = window.innerWidth;
+                    canvas.height = window.innerHeight;
                 },
                 clearFrame: function () {
                     context.clearRect(0, 0, canvas.width, canvas.height);
@@ -538,7 +538,7 @@
         },
         heart: function (size = 18) {
     // Responsive: scale theo chiều rộng và chiều cao, lấy nhỏ nhất, nhân thêm hệ số cho vừa mắt
-    let scale = Math.min(window.innerWidth, window.innerHeight) / 40;
+    let scale = Math.min(window.innerWidth, window.innerHeight) / 40; // 12 cho vừa, 10 cho to, 14 cho nhỏ
     let centerX = Math.floor(window.innerWidth / 2);
     let centerY = Math.floor(window.innerHeight / 2);
     let dots = [];
